@@ -4,17 +4,27 @@ import { Button, StyleSheet, Text, View, Image } from "react-native";
 
 const Cat = (props) => {
   const [isAwake, setIsAwake] = useState(true);
-  //const i = 0;
+  const [isSleep, setIsSleep] = useState(true);
+  const [count, setCount] = useState(0);
 
   return (
     <View>
       <Text>
-        My name is {props.name}, and I am {isAwake ? "awake. Day 0" : "sleeping. Day 1"}
+        My name is {props.name}, and I am {isAwake ? "awake. Day " : "sleeping. Day "}{count}
       </Text>
       <Button
         onPress={() => {
-          setIsAwake(true);
+          setIsAwake(false);
         }}
+        disabled={!isAwake}
+        title={isAwake ? "Let me sleep" : "Wake me up"}
+      />
+      <Button
+        onPress={() => {
+          setIsAwake(true);
+          setCount(count + 1);
+        }}
+        disabled={isAwake}
         title={isAwake ? "Let me sleep" : "Wake me up"}
       />
     </View>
