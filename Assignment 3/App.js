@@ -15,6 +15,7 @@ const Cat = (props) => {
       <Button
         onPress={() => {
           setIsAwake(false);
+          setCount(count + 1);
         }}
         disabled={!isAwake}
         title={isAwake ? "Let me sleep" : "Wake me up"}
