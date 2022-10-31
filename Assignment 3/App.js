@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View, Image } from "react-native";
 
 const Cat = (props) => {
-  const [isAwake, setIsSleeping] = useState(true);
-  let day = 0;
+  const [isAwake, setIsAwake] = useState(true);
+  const [count, setCount] = useState(0);
 
   return (
     <View>
       <Text>
-        My name is {props.name}, and I am {isAwake ? "awake" : "sleeping"}.
+        My name is {props.name}, and I am {isAwake ? "awake. Day " : "sleeping. Day "}{count}
       </Text>
       <Button
         onPress={() => {
-          setIsSleeping(false);
+          setIsAwake(!isAwake);
+          setCount(count + 1);
         }}
-        disabled={!isAwake}
         title={isAwake ? "Let me sleep" : "Wake me up"}
       />
     </View>
@@ -23,10 +23,28 @@ const Cat = (props) => {
 
 const Cafe = () => {
   return (
-    <>
-      <Cat name="Oyen" />
-    </>
+    <View style={styles.container}>
+      <Image
+        source={{
+          uri: "https://static.vecteezy.com/system/resources/thumbnails/007/731/064/small/cat-muzzle-cat-face-simple-illustration-vector.jpg",
+        }}
+        style={{ width: 300, height: 200 }}
+      />
+      <Cat name="Comel" />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FFE5B4",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  innerText: {
+    color: "red",
+  },
+});
 
 export default Cafe;
