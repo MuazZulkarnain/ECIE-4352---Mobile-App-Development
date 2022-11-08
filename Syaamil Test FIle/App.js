@@ -4,36 +4,32 @@ import { FlatList, StyleSheet, Text, View, TextInput, Button } from 'react-nativ
 
 export default function App() {
 
-  const textInputChange = (t) => {
-      setTextInputData(t)
-  }
-
-  const buttonClicked = () => {
-    setMyData(current => [...current, textInputData])
-  }
-
+  const textInputChange = (t) => {setTextInputData(t)}
+  const buttonClicked = () => {setMyData(current => [...current, textInputData])}
   const [myData, setMyData] = useState(['Apple', 'Orange'])
   const [textInputData, setTextInputData] = useState('')
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.textPrompt}>Enter item:</Text>
-      <StatusBar style="auto" />
-      <View>
-        <TextInput 
-          style = {styles.inputText}
-          placeholder = "Enter"
-          onChangeText={(newText) => textInputChange(newText)}
-        />
-        <Text> </Text>
-      </View>
+    <View style = {styles.container}>
+      <Text style = {styles.textPrompt}>
+        ENTER ITEM
+      </Text>
+      <StatusBar style = "auto"/>
+      <TextInput 
+        style = {styles.inputText}
+        placeholder = "Enter fruit name"
+        onChangeText={(newText) => textInputChange(newText)}
+      />
+      <Text> </Text>
       <View>
         <Button
           title = "Add"
           onPress={buttonClicked}
           />
         <Text> </Text>
-        <Text>The list of fruits:</Text>
+        <Text style = {styles.textPrompt}>
+          The list of fruits:
+        </Text>
         <Text> </Text>
         <FlatList
           data={myData}
@@ -45,9 +41,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
   inputText: {
-    marginTop:10,
-    borderWidth: 1,
+    marginTop:15,
+    borderWidth: 3,
     borderColor:"white"
   },
 
@@ -59,7 +56,8 @@ const styles = StyleSheet.create({
   },
 
   textPrompt: {
-    fontSize: 24,
+    fontSize: 25,
     color: "purple",
   },
+
 });
