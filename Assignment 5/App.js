@@ -1,16 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  Button,
-} from "react-native";
+import { FlatList, StyleSheet, Text, View, Image, TextInput, Button,} from "react-native";
 
 export default function App() {
+
   const textInputChange = (t) => {
     setTextInputData(t);
   };
@@ -29,9 +22,9 @@ export default function App() {
         source={{
           uri: "https://i.pinimg.com/originals/3c/8f/5f/3c8f5fd12233a3aeeb260a8b9148eb2f.png",
         }}
-        style={{ width: 200, height: 200 }}
+        style={{width: 200, height: 200}}
       />
-      <StatusBar style="auto" />
+      <StatusBar style="auto"/>
       <View>
         <TextInput
           style={styles.inputText}
@@ -42,10 +35,14 @@ export default function App() {
         <Text>{myData}</Text> */}
       </View>
       <View>
-        <Button title="Add" color="gray" onPress={buttonClicked} />
+        <Button 
+          title="Add" 
+          color="gray" 
+          onPress={buttonClicked} 
+        />
         <FlatList
           data={myData}
-          renderItem={({ item }) => (
+          renderItem={({item}) => (
             <Text style={styles.champions}>{item}</Text>
           )}
         />
