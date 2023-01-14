@@ -9,11 +9,11 @@ function HomeScreen({ navigation }) {
       <Text>Pick Mahallah</Text>
       <Button
         title="Mahallah Ali"
-        onPress={() => navigation.navigate('Mahallah1')}
+        onPress={() => navigation.navigate('Mahallah Ali')}
       />
         <Button
         title="Mahallah Faruq"
-        onPress={() => navigation.navigate('Mahallah2')}
+        onPress={() => navigation.navigate('Mahallah Faruq')}
       />
     </View>
   );
@@ -44,8 +44,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Mahallah1" component={Mahallah1} />
-        <Stack.Screen name="Mahallah2" component={Mahallah2} />
+        <Stack.Screen name="Mahallah Ali" component={Mahallah1} />
+        <Stack.Screen name="Mahallah Faruq" component={Mahallah2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
