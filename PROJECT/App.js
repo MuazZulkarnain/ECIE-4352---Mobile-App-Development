@@ -6,19 +6,32 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text>Pick Mahallah</Text>
       <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        title="Mahallah Ali"
+        onPress={() => navigation.navigate('Mahallah1')}
+      />
+        <Button
+        title="Mahallah Faruq"
+        onPress={() => navigation.navigate('Mahallah2')}
       />
     </View>
   );
 }
 
-function DetailsScreen({ navigation }) {
+function Mahallah1({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+      <Text>Mahallh Ali Menu</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
+
+function Mahallah2({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Mahallh Faruq Menu</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
@@ -31,7 +44,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Mahallah1" component={Mahallah1} />
+        <Stack.Screen name="Mahallah2" component={Mahallah2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
