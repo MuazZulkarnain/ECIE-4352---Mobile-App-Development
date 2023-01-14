@@ -19,9 +19,23 @@ function HomeScreen({ navigation }) {
   );
 }
 
-import Mahallah1 from './Mahallah/Mahallah1';
-import Mahallah2 from './Mahallah/Mahallah2';
+function Mahallah1({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Mahallh Ali Menu</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
 
+function Mahallah2({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Mahallh Faruq Menu</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
 
 const Stack = createNativeStackNavigator();
 
