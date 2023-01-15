@@ -216,25 +216,7 @@ import Constants from 'expo-constants';
     },
   ];
   
-  function Item({ title }) {
-    return (
-      <View style={styles.item}>
-        <Text style={styles.title}>{title}</Text>
-      </View>
-    );
-  }
 
-//   function App() {
-//   return (
-//     <View>
-//         <Image source={require('../src/menu2.jpg')}
-//        style={{width: 400, height: 400}} />
-//     </View>
-//   );
-// }
-// export default App;
-
-  
   export default function App() {
     return (
       <SafeAreaView style={styles.container}>
@@ -246,34 +228,19 @@ import Constants from 'expo-constants';
             return (
               <View>
                 <View style={styles.container}>
-                  <View style={{ backgroundColor: '#529FF3', margin: 10 }}>
+                  <View style={{ margin: 10 }}>
                     {item.title && (
                       <Text
-                        style={{
-                          paddingVertical: 10,
-                          fontSize: 15,
-                          paddingStart: 5,
-                          paddingEnd: 16,
-                          color: 'black',
-                        }}>
+                        style={{paddingVertical: 10,fontSize: 25,paddingStart: 5,paddingEnd: 16,color: 'black',alignSelf: 'center',fontWeight: 'bold'}}>
                         {item.title}
                       </Text>
                     )}
                     {item.imgUrl && (
-                      <Image
-                        source={item.imgUrl}
-                        style={{ height: 250, width: 250 }}
-                      />
+                      <Image source={item.imgUrl} style={{ height: 250, width: 250, alignSelf: 'center'}}/>
                     )}
                      {item.price && (
                       <Text
-                        style={{
-                          paddingVertical: 10,
-                          fontSize: 15,
-                          paddingStart: 5,
-                          paddingEnd: 16,
-                          color: 'black',
-                        }}>
+                        style={{ paddingVertical: 10, fontSize: 20, paddingStart: 5, paddingEnd: 16, color: 'black', alignSelf: 'center', fontWeight: 'bold'}}>
                         {item.price}
                       </Text>
                     )}
