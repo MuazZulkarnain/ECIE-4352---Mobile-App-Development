@@ -5,22 +5,28 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Pick Mahallah</Text>
-      <Button
-        title="Mahallah Ali"
-        onPress={() => navigation.navigate('Mahallah Ali')}
-      />
-        <Button
-        title="Mahallah Faruq"
-        onPress={() => navigation.navigate('Mahallah Faruq')}
-      />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text style={{ fontSize: 20}} >MAIN MENU</Text>
+      <View style={[{ width: "50%", marginTop: 20, backgroundColor: "white" }]}>
+          <Button
+            title="Mahallah Ali"
+            onPress={() => navigation.navigate('Mahallah Ali')}
+            style={{ height: 100, marginTop: 10 }}
+          />
+        </View>
+        <View style={[{width: "50%", marginTop: 20, backgroundColor: "white" }]}>
+          <Button
+          title="Mahallah Faruq"
+          onPress={() => navigation.navigate('Mahallah Faruq')}
+        />
+        </View>
     </View>
   );
 }
 
 import Mahallah1 from './Mahallah/Mahallah1';
 import Mahallah2 from './Mahallah/Mahallah2';
+
 
 
 const Stack = createNativeStackNavigator();
