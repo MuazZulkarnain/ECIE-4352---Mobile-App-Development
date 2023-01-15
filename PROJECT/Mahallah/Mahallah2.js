@@ -24,211 +24,245 @@ const data = [
     price : 'RM 8.00',
     imgUrl: require('../src/image/Chicken Chop.jpeg'),
     status : 'Wastern Food',
-    navigateTo:"Mahallah Ali"
+    navigateTo: "Booth: Westernize"
   },
   {
     id: '002',
     title: 'Nasi Goreng Chicken Chop',
     price : 'RM 10.00',
     imgUrl: require('../src/image/Nasi Goreng Chicken Chop.jpg'),
+    navigateTo: "Booth: Westernize"
   },
   {
     id: '003',
     title: 'Lamb Chop',
     price : 'RM 12.00',
     imgUrl: require('../src/image/Lamb Chop.jpg'),
+    navigateTo: "Booth: Westernize"
   },
   {
     id: '004',
     title: 'Nasi Goreng Lamb Chop',
     price : 'RM 14.00',
     imgUrl: require('../src/image/Nasi Goreng Lamb Chop.jpg'),
+    navigateTo: "Booth: Westernize"
   },
   {
     id: '005',
     title: 'Fish And Fries',
     price : 'RM 7.00',
     imgUrl: require('../src/image/Fish And Fries.jpg'),
+    navigateTo: "Booth: Westernize"
   },
   {
     id: '006',
     title: 'Shawarma',
     price : 'RM 7.00',
     imgUrl: require('../src/image/Shawarma.jpg'),
+    navigateTo: "Booth: Original Syrian"
   },
   {
     id: '007',
     title: 'Roti John',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Roti John.jpg'),
+    navigateTo: "Booth: Original Syrian"
   },
   {
     id: '008',
     title: 'Burger Pak Hang',
     price : 'RM 9.00',
     imgUrl: require('../src/image/Burger Pak Hang.jpg'),
+    navigateTo: "Booth: Original Syrian"
   },
   {
     id: '009',
     title: 'Burrito & Mix',
     price : 'RM 9.00',
     imgUrl: require('../src/image/Burrito & Mix.jpg'),
+    navigateTo: "Booth: Original Syrian"
   },
   {
     id: '010',
     title: 'Pizza',
     price : 'RM 5.00',
     imgUrl: require('../src/image/Pizza.jpg'),
+    navigateTo: "Booth: Original Syrian"
   },
   {
     id: '011',
     title: 'Roti Canai',
     price : 'RM 1.50',
     imgUrl: require('../src/image/Roti Canai.jpg'),
+    navigateTo: "Booth: Roti Canai Mamu"
   },
   {
     id: '012',
     title: 'Roti Telur',
     price : 'RM 2.50',
     imgUrl: require('../src/image/Roti Telur.jpg'),
+    navigateTo: "Booth: Roti Canai Mamu"
   },
   {
     id: '013',
     title: 'Roti Cheese',
     price : 'RM 2.50',
     imgUrl: require('../src/image/Roti Cheese.JPG'),
+    navigateTo: "Booth: Roti Canai Mamu"
   },
   {
     id: '014',
     title: 'Roti Susu',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Roti Susu.jpg'),
+    navigateTo: "Booth: Roti Canai Mamu"
   },
   {
     id: '015',
     title: 'Roti Planta',
     price : 'RM 2.50',
     imgUrl: require('../src/image/Roti Planta.jpg'),
+    navigateTo: "Booth: Roti Canai Mamu"
   },
   {
     id: '016',
     title: 'Mee Bandung',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Mee Bandung.jpg'),
+    navigateTo: "Booth: Soup Fiesta"
   },
   {
     id: '017',
     title: 'Mee Kari',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Mee Kari.jpg'),
+    navigateTo: "Booth: Soup Fiesta"
   },
   {
     id: '018',
     title: 'Mee Siam',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Mee Siam.jpg'),
+    navigateTo: "Booth: Soup Fiesta"
   },
   {
     id: '019',
     title: 'Laksa',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Laksa.jpg'),
+    navigateTo: "Booth: Soup Fiesta"
   },
   {
     id: '020',
     title: 'Sup Utara',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Sup Utara.jpg'),
+    navigateTo: "Booth: Soup Fiesta"
   },
   {
     id: '021',
     title: 'Eggs Sandwich',
     price : 'RM 2.00',
     imgUrl: require('../src/image/Eggs Sandwich.jpg'),
+    navigateTo: "Booth: Ginger Bits!"
   },
   {
     id: '022',
     title: 'Grilled Chicken Sandwich',
     price : 'RM 4.00',
     imgUrl: require('../src/image/Grilled Chicken Sandwich.jpg'),
+    navigateTo: "Booth: Ginger Bits!"
   },
   {
     id: '023',
     title: 'Bbq Chicken Sandwich',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Bbq Chicken Sandwich.jpg'),
+    navigateTo: "Booth: Ginger Bits!"
   },
   {
     id: '024',
     title: 'Chicken Slice Sandwich',
     price : 'RM 3.50',
     imgUrl: require('../src/image/Chicken Slice Sandwich.jpg'),
+    navigateTo: "Booth: Ginger Bits!"
   },
   {
     id: '025',
     title: 'Beef Blackpepper Sandwich',
     price : 'RM 3.50',
     imgUrl: require('../src/image/Beef Blackpepper Sandwich.jpg'),
+    navigateTo: "Booth: Ginger Bits!"
   },
   {
     id: '026',
     title: 'Nasi Ayam Ghepok',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam Ghepok.jpg'),
+    navigateTo: "Booth: Rasa Nusantara"
   },
   {
     id: '027',
     title: 'Nasi Ayam',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam.jpeg'),
+    navigateTo: "Booth: Rasa Nusantara"
   },
   {
     id: '028',
     title: 'Nasi Ayam Penyet',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam Penyet.jpeg'),
+    navigateTo: "Booth: Rasa Nusantara"
   },
   {
     id: '029',
     title: 'Nasi Tomato',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Tomato.jpg'),
+    navigateTo: "Booth: Rasa Nusantara"
   },
   {
     id: '030',
     title: 'Nasi Kukus Ayam Cincang',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Kukus Ayam Cincang.jpg'),
+    navigateTo: "Booth: Rasa Nusantara"
   },
   {
     id: '031',
     title: 'Nasi Lemak',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Nasi Lemak.jpg'),
+    navigateTo: "Booth: Breakfast Aloha!"
   },
   {
     id: '032',
     title: 'Nasi Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Nasi Goreng.jpg'),
+    navigateTo: "Booth: Breakfast Aloha!"
   },
   {
     id: '033',
     title: 'Mee Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Mee Goreng.jpg'),
+    navigateTo: "Booth: Breakfast Aloha!"
   },
   {
     id: '034',
     title: 'Kuey Teow Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Kuey Teow Goreng.jpg'),
+    navigateTo: "Booth: Breakfast Aloha!"
   },
   {
     id: '035',
     title: 'Maggi Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Maggi Goreng.jpg'),
+    navigateTo: "Booth: Breakfast Aloha!"
   },
 ];
 
