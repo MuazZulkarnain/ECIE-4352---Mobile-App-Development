@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { Text,StyleSheet,View,Image,TextInput,Dimensions,FlatList,TouchableOpacity,TouchableOpacityComponent,SafeAreaView } from "react-native";
+import { Text,StyleSheet,View,Image,TextInput,Dimensions,FlatList,TouchableOpacity,TouchableOpacityComponent,SafeAreaView, Button } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
+
 
 const listTab = [
   {
@@ -19,7 +23,8 @@ const data = [
     title: 'Chicken Chop',
     price : 'RM 8.00',
     imgUrl: require('../src/image/Chicken Chop.jpeg'),
-    status : 'Wastern Food'
+    status : 'Wastern Food',
+    navigateTo:"Mahallah Ali"
   },
   {
     id: '002',
@@ -38,201 +43,17 @@ const data = [
     title: 'Nasi Goreng Lamb Chop',
     price : 'RM 14.00',
     imgUrl: require('../src/image/Nasi Goreng Lamb Chop.jpg'),
-  },
-  {
-    id: '005',
-    title: 'Fish And Fries',
-    price : 'RM 7.00',
-    imgUrl: require('../src/image/Fish And Fries.jpg'),
-  },
-  {
-    id: '006',
-    title: 'Shawarma',
-    price : 'RM 7.00',
-    imgUrl: require('../src/image/Shawarma.jpg'),
-  },
-  {
-    id: '007',
-    title: 'Roti John',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Roti John.jpg'),
-  },
-  {
-    id: '008',
-    title: 'Burger Pak Hang',
-    price : 'RM 9.00',
-    imgUrl: require('../src/image/Burger Pak Hang.jpg'),
-  },
-  {
-    id: '009',
-    title: 'Burrito & Mix',
-    price : 'RM 9.00',
-    imgUrl: require('../src/image/Burrito & Mix.jpg'),
-  },
-  {
-    id: '010',
-    title: 'Pizza',
-    price : 'RM 5.00',
-    imgUrl: require('../src/image/Pizza.jpg'),
-  },
-  {
-    id: '011',
-    title: 'Roti Canai',
-    price : 'RM 1.50',
-    imgUrl: require('../src/image/Roti Canai.jpg'),
-    status : 'Malaysian Food'
-  },
-  {
-    id: '012',
-    title: 'Roti Telur',
-    price : 'RM 2.50',
-    imgUrl: require('../src/image/Roti Telur.jpg'),
-  },
-  {
-    id: '013',
-    title: 'Roti Cheese',
-    price : 'RM 2.50',
-    imgUrl: require('../src/image/Roti Cheese.JPG'),
-  },
-  {
-    id: '014',
-    title: 'Roti Susu',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Roti Susu.jpg'),
-  },
-  {
-    id: '015',
-    title: 'Roti Planta',
-    price : 'RM 2.50',
-    imgUrl: require('../src/image/Roti Planta.jpg'),
-  },
-  {
-    id: '016',
-    title: 'Mee Bandung',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Mee Bandung.jpg'),
-  },
-  {
-    id: '017',
-    title: 'Mee Kari',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Mee Kari.jpg'),
-  },
-  {
-    id: '018',
-    title: 'Mee Siam',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Mee Siam.jpg'),
-  },
-  {
-    id: '019',
-    title: 'Laksa',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Laksa.jpg'),
-  },
-  {
-    id: '020',
-    title: 'Sup Utara',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Sup Utara.jpg'),
-  },
-  {
-    id: '021',
-    title: 'Eggs Sandwich',
-    price : 'RM 2.00',
-    imgUrl: require('../src/image/Eggs Sandwich.jpg'),
-  },
-  {
-    id: '022',
-    title: 'Grilled Chicken Sandwich',
-    price : 'RM 4.00',
-    imgUrl: require('../src/image/Grilled Chicken Sandwich.jpg'),
-  },
-  {
-    id: '023',
-    title: 'Bbq Chicken Sandwich',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Bbq Chicken Sandwich.jpg'),
-  },
-  {
-    id: '024',
-    title: 'Chicken Slice Sandwich',
-    price : 'RM 3.50',
-    imgUrl: require('../src/image/Chicken Slice Sandwich.jpg'),
-  },
-  {
-    id: '025',
-    title: 'Beef Blackpepper Sandwich',
-    price : 'RM 3.50',
-    imgUrl: require('../src/image/Beef Blackpepper Sandwich.jpg'),
-  },
-  {
-    id: '026',
-    title: 'Nasi Ayam Ghepok',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Nasi Ayam Ghepok.jpg'),
-  },
-  {
-    id: '027',
-    title: 'Nasi Ayam',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Nasi Ayam.jpeg'),
-  },
-  {
-    id: '028',
-    title: 'Nasi Ayam Penyet',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Nasi Ayam Penyet.jpeg'),
-  },
-  {
-    id: '029',
-    title: 'Nasi Tomato',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Nasi Tomato.jpg'),
-  },
-  {
-    id: '030',
-    title: 'Nasi Kukus Ayam Cincang',
-    price : 'RM 6.00',
-    imgUrl: require('../src/image/Nasi Kukus Ayam Cincang.jpg'),
-  },
-  {
-    id: '031',
-    title: 'Nasi Lemak',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Nasi Lemak.jpg'),
-  },
-  {
-    id: '032',
-    title: 'Nasi Goreng',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Nasi Goreng.jpg'),
-  },
-  {
-    id: '033',
-    title: 'Mee Goreng',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Mee Goreng.jpg'),
-  },
-  {
-    id: '034',
-    title: 'Kuey Teow Goreng',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Kuey Teow Goreng.jpg'),
-  },
-  {
-    id: '035',
-    title: 'Maggi Goreng',
-    price : 'RM 3.00',
-    imgUrl: require('../src/image/Maggi Goreng.jpg'),
-  },
+  }
 ];
+
 
 const separator = () => {
   return <View style={{ height: 1, backgroundColor: "#f1f1f1" }} />;
 };
 
 const Practice = () => {
+
+
   const [status, setStatus] = useState("All Food")
   const [datalist, setDatalist] = useState(data);;
   const setStatusFilter = (status) => {
@@ -244,36 +65,41 @@ const Practice = () => {
     setStatus(status);
   };
 
-  const renderItem = ({ item, index }) => {
-    return (
-      <View key={index} style={styles.itemContainer}>
-        <View style={styles.itemLogo}>
-          <Image
+const navigation = useNavigation()
+const renderItem = ({  item, index }) => {
+  return (
+    <View key={index} style={styles.itemContainer}>
+      <View style={styles.itemLogo}>
+        <Image
             style={styles.itemImage}
             source={item.imgUrl}
-          />
-        </View>
-
-        <View style={styles.itemBody}>
-          <Text style={styles.itemName}>{item.title}</Text>
-        </View>
-        <View style={styles.itemBody}>
-          <Text style={styles.itemName}>{item.price}</Text>
-        </View>
-
-        <View
-          style={[
-            styles.itemStatus,
-            {
-              backgroundColor: item.status === "Malaysian Food" ? "#e5848e" : "#69C080",
-            },
-          ]}
-        >
-          <Text>{item.status}</Text>
-        </View>
+        />
       </View>
-    );
-  };
+      <View style={styles.itemBody}>
+          <Text style={styles.itemName}>{item.title}</Text>
+      </View>
+      <View style={styles.itemBody}>
+          <Text style={styles.itemName}>{item.price}</Text>
+      </View>
+      <View
+        style={[
+          styles.itemStatus,
+          {
+            backgroundColor: item.status === "Malaysian Food" ? "#e5848e" : "#69C080",
+          },
+         ]}
+       >
+         <Text>{item.status}</Text>
+      </View>
+      <View>
+             <Button 
+         title="Go to Booth"
+         onPress={() => navigation.navigate(item.navigateTo)}
+        />
+      </View>
+     </View>
+  );
+ };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -296,11 +122,11 @@ const Practice = () => {
       </View>
 
       <FlatList
-   data={datalist}
-   keyExtractor={(e, i) => i.toString()}
-   renderItem={renderItem}
-   ItemSeparatorComponent={separator} //ここを追記
-  />
+          data={datalist}
+          keyExtractor={(e, i) => i.toString()}
+          renderItem={renderItem}
+          ItemSeparatorComponent={separator}
+      />
     </SafeAreaView>
   );
 };
