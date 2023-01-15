@@ -19,7 +19,6 @@ export default Booth1;
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    //backgroundColor: "#fff",
     backgroundColor: 'aliceblue',
     flex: 1,
     padding: 20,
