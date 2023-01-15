@@ -273,7 +273,6 @@ const separator = () => {
 
 const Practice = () => {
 
-
   const [status, setStatus] = useState("All Food")
   const [datalist, setDatalist] = useState(data);;
   const setStatusFilter = (status) => {
