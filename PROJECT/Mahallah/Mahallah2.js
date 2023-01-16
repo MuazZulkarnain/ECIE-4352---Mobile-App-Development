@@ -383,7 +383,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   btnTab: {
-    width: Dimensions.get("window").width / 3,
+    width: Dimensions.get("window").width / 4,
     flexDirection: "row",
     borderWidth: 0.5,
     borderColor: "#ebebeb",
