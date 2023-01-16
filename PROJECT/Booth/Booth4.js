@@ -4,9 +4,7 @@ import {View, Text, Image, ScrollView, TextInput, StyleSheet} from 'react-native
 const Booth4 = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.text}>
-        <Text>Booth: Soup Fiesta</Text>
-      </View>
+      <Text style={styles.text}>Booth: Soup Fiesta</Text>
       <Image source={require('./booth4.png')} 
         style={styles.image}
       />
@@ -25,22 +23,20 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 620,
-    height: 535,
+    height: 550,
     alignSelf: "center",
     borderColor: 'black',
     borderWidth: 2,
   },
   text: {
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 4,
     backgroundColor: 'oldlace',
     alignSelf: 'flex-start',
-    marginHorizontal: '1%',
     marginBottom: 50,
-    minWidth: '48%',
-    fontSize: 12,
-    fontWeight: '500',
+    fontSize: 30,
+    fontWeight: 'bold',
     color: 'coral',
     textAlign: 'center',
     alignSelf: "center",
