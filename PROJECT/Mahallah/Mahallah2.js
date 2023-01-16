@@ -300,10 +300,10 @@ const renderItem = ({  item, index }) => {
       <View style={styles.itemBody}>
           <Text style={styles.itemName}>{item.price}</Text>
       </View>
-      <View>
-             <Button 
-         title="Go to Booth"
-         onPress={() => navigation.navigate(item.navigateTo)}
+      <View style={styles.container}>
+        <Button color="#ff5c5c"
+        title="Go to Booth"
+        onPress={() => navigation.navigate(item.navigateTo)}
         />
       </View>
      </View>
@@ -348,7 +348,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 15,
   },
-
+  button: {
+    justifyContent: "center",
+    backgroundColor: "aqua",
+    padding: 15,
+  },
   listTab: {
     flexDirection: "row",
     alignSelf: "center",
