@@ -1,20 +1,24 @@
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text style={{ fontSize: 20}} >MAIN MENU</Text>
-      <View style={[{ width: "50%", marginTop: 20, backgroundColor: "white" }]}>
+      <Image source={require('./home1.png')}
+        style={{height:600, width: 600, alignSelf: "center"}}
+      />
+      <Text style={{fontSize: 30, fontWeight: 'bold', color: 'black'}}>SELECT MAHALLAH</Text>
+      <View style={[{ width: "8%", marginTop: 10, backgroundColor: "white" }]}>
           <Button
+            color="#ff5c5c"
             title="Mahallah Ali"
             onPress={() => navigation.navigate('Mahallah Ali')}
             style={{ height: 100, marginTop: 10 }}
           />
         </View>
-        <View style={[{width: "50%", marginTop: 20, backgroundColor: "white" }]}>
+        <View style={[{width: "8%", marginTop: 20, backgroundColor: "white" }]}>
           <Button
           title="Mahallah Faruq"
           onPress={() => navigation.navigate('Mahallah Faruq')}
