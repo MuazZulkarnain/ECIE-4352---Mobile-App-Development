@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 620,
-    height: 535,
+    height: 550,
     alignSelf: "center",
     borderColor: 'black',
     borderWidth: 2,
