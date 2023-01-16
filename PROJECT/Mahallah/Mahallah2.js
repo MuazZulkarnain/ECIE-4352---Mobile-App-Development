@@ -13,7 +13,10 @@ const listTab = [
     status: "Malaysian Food",
   },
   {
-    status: "Wastern Food",
+    status: "Western Food",
+  },
+  {
+    status: "Arabic Food",
   },
 ];
 
@@ -23,7 +26,7 @@ const data = [
     title: 'Chicken Chop',
     price : 'RM 8.00',
     imgUrl: require('../src/image/Chicken Chop.jpeg'),
-    status : 'Wastern Food',
+    status : 'Western Food',
     navigateTo: "Booth: Westernize"
   },
   {
@@ -31,6 +34,7 @@ const data = [
     title: 'Nasi Goreng Chicken Chop',
     price : 'RM 10.00',
     imgUrl: require('../src/image/Nasi Goreng Chicken Chop.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Westernize"
   },
   {
@@ -38,6 +42,7 @@ const data = [
     title: 'Lamb Chop',
     price : 'RM 12.00',
     imgUrl: require('../src/image/Lamb Chop.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Westernize"
   },
   {
@@ -45,6 +50,7 @@ const data = [
     title: 'Nasi Goreng Lamb Chop',
     price : 'RM 14.00',
     imgUrl: require('../src/image/Nasi Goreng Lamb Chop.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Westernize"
   },
   {
@@ -52,6 +58,7 @@ const data = [
     title: 'Fish And Fries',
     price : 'RM 7.00',
     imgUrl: require('../src/image/Fish And Fries.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Westernize"
   },
   {
@@ -59,6 +66,7 @@ const data = [
     title: 'Shawarma',
     price : 'RM 7.00',
     imgUrl: require('../src/image/Shawarma.jpg'),
+    status : 'Arabic Food',
     navigateTo: "Booth: Original Syrian"
   },
   {
@@ -73,6 +81,7 @@ const data = [
     title: 'Burger Pak Hang',
     price : 'RM 9.00',
     imgUrl: require('../src/image/Burger Pak Hang.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Original Syrian"
   },
   {
@@ -80,6 +89,7 @@ const data = [
     title: 'Burrito & Mix',
     price : 'RM 9.00',
     imgUrl: require('../src/image/Burrito & Mix.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Original Syrian"
   },
   {
@@ -87,6 +97,7 @@ const data = [
     title: 'Pizza',
     price : 'RM 5.00',
     imgUrl: require('../src/image/Pizza.jpg'),
+    status : 'Western Food',
     navigateTo: "Booth: Original Syrian"
   },
   {
@@ -136,6 +147,7 @@ const data = [
     title: 'Mee Kari',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Mee Kari.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Soup Fiesta"
   },
   {
@@ -150,6 +162,7 @@ const data = [
     title: 'Laksa',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Laksa.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Soup Fiesta"
   },
   {
@@ -157,6 +170,7 @@ const data = [
     title: 'Sup Utara',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Sup Utara.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Soup Fiesta"
   },
   {
@@ -199,6 +213,7 @@ const data = [
     title: 'Nasi Ayam Ghepok',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam Ghepok.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Rasa Nusantara"
   },
   {
@@ -206,6 +221,7 @@ const data = [
     title: 'Nasi Ayam',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam.jpeg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Rasa Nusantara"
   },
   {
@@ -213,6 +229,7 @@ const data = [
     title: 'Nasi Ayam Penyet',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Ayam Penyet.jpeg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Rasa Nusantara"
   },
   {
@@ -220,6 +237,7 @@ const data = [
     title: 'Nasi Tomato',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Tomato.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Rasa Nusantara"
   },
   {
@@ -227,6 +245,7 @@ const data = [
     title: 'Nasi Kukus Ayam Cincang',
     price : 'RM 6.00',
     imgUrl: require('../src/image/Nasi Kukus Ayam Cincang.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Rasa Nusantara"
   },
   {
@@ -234,6 +253,7 @@ const data = [
     title: 'Nasi Lemak',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Nasi Lemak.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Breakfast Aloha!"
   },
   {
@@ -241,6 +261,7 @@ const data = [
     title: 'Nasi Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Nasi Goreng.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Breakfast Aloha!"
   },
   {
@@ -248,6 +269,7 @@ const data = [
     title: 'Mee Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Mee Goreng.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Breakfast Aloha!"
   },
   {
@@ -255,6 +277,7 @@ const data = [
     title: 'Kuey Teow Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Kuey Teow Goreng.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Breakfast Aloha!"
   },
   {
@@ -262,6 +285,7 @@ const data = [
     title: 'Maggi Goreng',
     price : 'RM 3.00',
     imgUrl: require('../src/image/Maggi Goreng.jpg'),
+    status : 'Malaysian Food',
     navigateTo: "Booth: Breakfast Aloha!"
   },
 ];
