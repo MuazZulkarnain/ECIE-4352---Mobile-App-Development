@@ -300,16 +300,6 @@ const renderItem = ({  item, index }) => {
       <View style={styles.itemBody}>
           <Text style={styles.itemName}>{item.price}</Text>
       </View>
-      <View
-        style={[
-          styles.itemStatus,
-          {
-            backgroundColor: item.status === "Malaysian Food" ? "#e5848e" : "#69C080",
-          },
-         ]}
-       >
-         <Text>{item.status}</Text>
-      </View>
       <View>
              <Button 
          title="Go to Booth"
